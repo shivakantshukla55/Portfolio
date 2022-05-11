@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
+import { About } from "../pages/About";
 
-const About = () => <h2>About</h2>;
 const Work = () => <h2>Work</h2>;
 const Contact = () => <h2>Contact</h2>;
 
