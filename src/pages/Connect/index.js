@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
-export const Work = () => {
-  return <StyledWork>Work</StyledWork>;
+export const Connect = () => {
+  return <StyledConnect>Connect</StyledConnect>;
 };
 
 //style
-const StyledWork = styled.div`
+const StyledConnect = styled.div`
   width: 100%;
   height: 100%;
   display: flex;

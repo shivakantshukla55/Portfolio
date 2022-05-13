@@ -1,9 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { About } from "../pages/About";
-
-const Skills = () => <h2>Skills</h2>;
-const Work = () => <h2>Work</h2>;
-const Connect = () => <h2>Connect</h2>;
+import { Work } from "../pages/Work";
+import { Skills } from "../pages/Skills";
+import { Connect } from "../pages/Connect";
 
 const Home = () => {
   return <Navigate to="/about" />;
