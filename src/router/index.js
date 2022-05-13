@@ -1,8 +1,9 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { About } from "../pages/About";
 
+const Skills = () => <h2>Skills</h2>;
 const Work = () => <h2>Work</h2>;
-const Contact = () => <h2>Contact</h2>;
+const Connect = () => <h2>Connect</h2>;
 
 const Home = () => {
   return <Navigate to="/about" />;
@@ -16,7 +17,8 @@ export const AppRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/work" element={<Work />} />
-      <Route path="/contact" element={<Contact />} />
+      <Route path="/skills" element={<Skills />} />
+      <Route path="/connect" element={<Connect />} />
       <Route element={<PageNotFound />} />
     </Routes>
   );

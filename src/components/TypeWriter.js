@@ -51,7 +51,7 @@ const StyledContainer = styled.div`
     display: inline-block;
     font-style: italic;
     font-weight: 900;
-    border-right: 5px solid ${(props) => props.theme.title || "red"};
+    border-right: 2px solid ${(props) => props.theme.title || "red"};
   }
 
   .typewriter-blink {
