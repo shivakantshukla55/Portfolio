@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../constants/screenSize";
+import { ResumeButton } from "../../components/ResumeButton";
 
 export const Work = () => {
   return (
@@ -51,6 +52,9 @@ export const Work = () => {
           </ul>
         </div>
       </div>
+      <div className="resume-btn-contain">
+        <ResumeButton />
+      </div>
     </StyledWork>
   );
 };
@@ -67,6 +71,7 @@ const StyledWork = styled.div`
     display: flex;
     justify-content: space-between;
     column-gap: 10px;
+    margin-bottom: 40px;
 
     @media ${device.tablet} {
       flex-wrap: wrap;
@@ -116,5 +121,9 @@ const StyledWork = styled.div`
     li {
       margin-bottom: 10px;
     }
+  }
+
+  .resume-btn-contain {
+    text-align: center;
   }
 `;

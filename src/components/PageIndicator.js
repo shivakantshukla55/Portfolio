@@ -26,7 +26,7 @@ export const PageIndicator = () => {
         tempIndicator = "connect";
         break;
       default:
-        tempIndicator = "error";
+        tempIndicator = "404";
     }
     setIndicator(tempIndicator);
   }, [location]);
