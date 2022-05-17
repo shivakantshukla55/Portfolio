@@ -37,10 +37,14 @@ export const PageIndicator = () => {
 //style
 const Container = styled.div`
   height: ${STYLE_VAR.pageIndicatorHeight};
-  padding: 25px;
+  width: 100%;
+  padding: 0 25px 50px 0;
   text-align: right;
   font-size: 30px;
   background: ${(props) => props.theme.body || "red"};
   color: ${(props) => props.theme.subtitle || "red"};
   box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 `;

@@ -5,8 +5,13 @@ import { dark, light } from "./constants/theme";
 import { Navbar } from "./components/Nav";
 import { PageIndicator } from "./components/PageIndicator";
 import { STYLE_VAR } from "./constants/cssVariables";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    const html = document.querySelector("html");
+    html.classList.add("dark");
+  }, []);
   return (
     <>
       <ThemeProvider theme={dark}>
@@ -25,8 +30,6 @@ export default App;
 //style
 
 const StyledApp = styled.div`
-  height: calc(100vh - ${STYLE_VAR.pageIndicatorHeight});
-  width: 100%;
   background-color: ${(props) => props.theme.body};
   nav {
     text-align: right;

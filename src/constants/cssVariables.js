@@ -1,3 +1,3 @@
 export const STYLE_VAR = {
-  pageIndicatorHeight: "90px",
+  pageIndicatorHeight: "70px",
 };

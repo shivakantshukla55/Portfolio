@@ -29,6 +29,7 @@ const Container = styled.div`
     position: fixed;
     width: 36px;
     height: 30px;
+    display: inline-block;
     right: 36px;
     top: 36px;
   }
