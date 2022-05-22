@@ -64,7 +64,7 @@ const StyledWork = styled.div`
   padding: 100px;
 
   @media ${device.tablet} {
-    padding: 70px 15px;
+    padding: 86px 15px;
   }
 
   .container {
