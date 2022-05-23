@@ -14,6 +14,7 @@ import { AiFillApi, AiFillHtml5 } from "react-icons/ai";
 import { RatingComponent } from "../../components/RatingComponent";
 import { STYLE_VAR } from "../../constants/cssVariables";
 import { device } from "../../constants/screenSize";
+import { CircularStatusbar } from "../../components/CircularStatusbar";
 
 const skillsList = [
   {
@@ -86,9 +87,18 @@ const skillsList = [
     rating: 3,
     icon: <FaGithub />,
   },
+  // {
+  //   title: "AMP",
+  //   rating: 4,
+  //   icon: <AMP />,
+  // },
 ];
 
 export const Skills = () => {
+  const getPercentage = (rating) => {
+    const percentage = (rating / 5) * 100;
+    return percentage;
+  };
   return (
     <StyledSkills>
       <ul className="skill-list">
@@ -97,8 +107,19 @@ export const Skills = () => {
               <li key={eachSkill.title} className="eachskill">
                 <span className="icon">{eachSkill.icon}</span>
                 <span className="sub-title">{eachSkill.title}</span>
-                <span>
-                  <RatingComponent rating={eachSkill.rating} />
+                <span className="star-container-d">
+                  <RatingComponent
+                    rating={eachSkill.rating}
+                    starColor={STYLE_VAR.title}
+                    starEmptyColor={STYLE_VAR.subtitle}
+                  />
+                </span>
+                <span className="circle-statusbar">
+                  <CircularStatusbar
+                    percentage={getPercentage(eachSkill.rating)}
+                    color={STYLE_VAR.title}
+                    trailColor={STYLE_VAR.subtitle}
+                  />
                 </span>
               </li>
             ))
@@ -110,17 +131,12 @@ export const Skills = () => {
 
 //style
 const StyledSkills = styled.div`
+  padding: 100px;
   display: block;
   justify-content: center;
 
-  @media ${device.tablet} {
-    .sub-title {
-      display: none;
-    }
-  }
-
   .skill-list {
-    margin: ${STYLE_VAR.pageIndicatorHeight || "50px"} auto;
+    margin: 0 auto;
     width: 50%;
 
     @media ${device.tablet} {
@@ -143,6 +159,19 @@ const StyledSkills = styled.div`
     span:not(:last-child) {
       margin-right: 10px;
     }
+
+    .circle-statusbar {
+      display: none;
+    }
+
+    @media ${device.tablet} {
+      .star-container-d {
+        display: none;
+      }
+      .circle-statusbar {
+        display: inline-block;
+      }
+    }
   }
 
   .sub-title {
@@ -153,5 +182,15 @@ const StyledSkills = styled.div`
     width: 50px;
     height: 50px;
     fill: ${(props) => props.theme.title || "red"};
+  }
+
+  .circle-statusbar {
+    width: 50px;
+    height: 50px;
+    display: none;
+  }
+
+  @media ${device.tablet} {
+    padding: 100px 10px;
   }
 `;
