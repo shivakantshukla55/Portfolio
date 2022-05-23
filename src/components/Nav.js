@@ -3,24 +3,18 @@ import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
 import styled from "styled-components";
 
-export class Navbar extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
-  render() {
-    return (
-      <Container>
-        <Menu right>
-          <StyledLink to="/about">About</StyledLink>
-          <StyledLink to="/work">Work</StyledLink>
-          <StyledLink to="/skills">Skills</StyledLink>
-          <StyledLink to="/connect">Connect</StyledLink>
-        </Menu>
-      </Container>
-    );
-  }
-}
+export const Navbar = () => {
+  return (
+    <Container>
+      <Menu right>
+        <StyledLink to="/about">About</StyledLink>
+        <StyledLink to="/work">Work</StyledLink>
+        <StyledLink to="/skills">Skills</StyledLink>
+        <StyledLink to="/connect">Connect</StyledLink>
+      </Menu>
+    </Container>
+  );
+};
 
 //style
 const Container = styled.div`
@@ -95,4 +89,5 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 const StyledLink = styled(Link)`
   color: ${(props) => props.theme.body};
+  margin-bottom: 10px;
 `;
