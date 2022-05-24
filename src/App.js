@@ -14,7 +14,6 @@ function App() {
   return (
     <>
       <ThemeProvider theme={dark}>
-        <h1>OYE</h1>
         <StyledApp>
           <Navbar />
           <AppRoutes />
