@@ -19,22 +19,22 @@ import { CircularStatusbar } from "../../components/CircularStatusbar";
 const skillsList = [
   {
     title: "javaScript",
-    rating: 3,
+    rating: 4,
     icon: <IoLogoJavascript />,
   },
   {
     title: "typeScript",
-    rating: 2,
+    rating: 3,
     icon: <SiTypescript />,
   },
   {
     title: "React",
-    rating: 1,
+    rating: 4.5,
     icon: <FaReact />,
   },
   {
     title: "Redux",
-    rating: 3.5,
+    rating: 4.5,
     icon: <SiRedux />,
   },
   {
@@ -49,12 +49,12 @@ const skillsList = [
   },
   {
     title: "nodeJS",
-    rating: 3,
+    rating: 2,
     icon: <FaNodeJs />,
   },
   {
     title: "express",
-    rating: 3,
+    rating: 2.5,
     icon: <SiExpress />,
   },
   {
@@ -64,7 +64,7 @@ const skillsList = [
   },
   {
     title: "HTML",
-    rating: 1,
+    rating: 4.5,
     icon: <AiFillHtml5 />,
   },
   {
@@ -74,24 +74,19 @@ const skillsList = [
   },
   {
     title: "styled components",
-    rating: 3,
+    rating: 5,
     icon: <SiStyledcomponents />,
   },
   {
     title: "git",
-    rating: 3,
+    rating: 4,
     icon: <FaGitAlt />,
   },
   {
     title: "gitHub",
-    rating: 3,
+    rating: 4,
     icon: <FaGithub />,
   },
-  // {
-  //   title: "AMP",
-  //   rating: 4,
-  //   icon: <AMP />,
-  // },
 ];
 
 export const Skills = () => {
