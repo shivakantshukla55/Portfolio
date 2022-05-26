@@ -16,7 +16,11 @@ export const Connect = () => {
             </a>
           </div>
           <div className="connect-linkedin">
-            <a href="https://www.linkedin.com/in/shivakant-shukla-sks1995/">
+            <a
+              href="https://www.linkedin.com/in/shivakant-shukla-sks1995/"
+              rel="noreferrer"
+              target="_blank"
+            >
               <FaLinkedin />
             </a>
           </div>
